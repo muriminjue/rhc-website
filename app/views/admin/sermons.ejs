@@ -1,0 +1,104 @@
+<%- include("../_partials/_adminheader.ejs") %>
+
+<!-- [ breadcrumb ] start -->
+
+<div class="page-header">
+  <div class="page-block">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div class="page-header-title">
+          <h5 class="m-b-10">Sermons</h5>
+        </div>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/"><i class="feather icon-home"></i></a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">Sermons</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">All</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [ breadcrumb ] end -->
+<div class="main-body">
+  <div class="page-wrapper">
+    <div class="row">
+      <a href="/admin/sermons/new" class="btn btn-primary w-10 w-xs-100 m-sm-2">
+        Create New Sermon</a
+      >
+    </div>
+    <% sermons.forEach(sermon => { %>
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-bold"><%= sermon.sermon_title %></h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <img
+              class="w-100"
+              src="/uploads/images/<%= sermon.sermon_poster %>"
+              alt="Event poster"
+            />
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <audio controls>
+              <source src="/uploads/audios/<%= sermon.sermon_audio %>" />
+              Your browser does not support the audio element.
+            </audio>
+            <h6 class="my-1">
+              Preached by:
+              <span class="text-muted"><%= sermon.sermon_speaker %></span>
+            </h6>
+            <h6 class="my-1">
+              Preached at:
+              <span class="text-muted"><%= sermon.sermon_location %></span> on:
+              <span class="text-muted"><%= sermon.sermon_date %></span>
+            </h6>
+
+            <hr />
+            <div
+              style="
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              "
+            >
+              <h6 class="my-1">Description:</h6>
+              <%- sermon.sermon_description %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a class="btn btn-secondary" href="/admin/sermons/edit/<%= sermon.id %>"
+          >Update</a
+        >
+        <form
+          action="/admin/sermons/delete/<%= sermon.id %>?_method=DELETE"
+          method="post"
+          class="d-inline"          
+          onsubmit="return confirm('Do you really want to delete this sermon');"
+        >
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        <% if (sermon.sermon_videolink) { %>
+        <a href="<%= sermon.sermon_videolink %>" class="link link-primary"
+          >Watch on youtube</a
+        >
+        <% } %>
+      </div>
+    </div>
+
+    <% }) %>
+  </div>
+</div>
+
+<%- include("../_partials/_adminfooter.ejs") %>

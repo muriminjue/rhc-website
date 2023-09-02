@@ -1,0 +1,79 @@
+<%- include("../_partials/_adminheader.ejs") %>
+
+<!-- [ breadcrumb ] start -->
+
+<div class="page-header">
+  <div class="page-block">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div class="page-header-title">
+          <h5 class="m-b-10">Change Password</h5>
+        </div>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/"><i class="feather icon-home"></i></a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">Profile</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">Password</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [ breadcrumb ] end -->
+<div class="main-body">
+  <div class="page-wrapper">
+    <div class="card">
+      <div class="card-header">
+        <h5>Change Password</h5>
+      </div>
+      <div class="card-body">
+        <% if (message) { %>
+        <div class="alert alert-danger" role="alert"><%= message %></div>
+        <% } %>
+        <form action="/admin/user/updatepass?_method=PUT" method="post">
+          <div class="form-group">
+            <label>Old Password: <sup style="color: red">*</sup></label>
+            <input
+              type="password"
+              class="form-control"
+              name="old_password"
+              placeholder="Old Password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>New Password: <sup style="color: red">*</sup></label>
+            <input
+              type="password"
+              class="form-control"
+              name="new_password"
+              placeholder="New Password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Repeat New Password: <sup style="color: red">*</sup></label>
+            <input
+              type="password"
+              class="form-control"
+              name="new_password1"
+              placeholder="Repeat New Password"
+              required
+            />
+          </div>
+          <div class="d-inline">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+            <a href="/admin" class="btn btn-danger">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../_partials/_adminfooter.ejs") %>

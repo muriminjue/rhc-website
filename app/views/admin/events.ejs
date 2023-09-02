@@ -1,0 +1,89 @@
+<%- include("../_partials/_adminheader.ejs") %>
+
+<!-- [ breadcrumb ] start -->
+
+<div class="page-header">
+  <div class="page-block">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div class="page-header-title">
+          <h5 class="m-b-10">Events</h5>
+        </div>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/"><i class="feather icon-home"></i></a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">Events</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">All</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [ breadcrumb ] end -->
+<div class="main-body">
+  <div class="page-wrapper">
+    <div class="row">
+      <a href="/admin/events/new" class="btn btn-primary w-10 w-xs-100 m-sm-2">
+        Create New Event</a
+      >
+    </div>
+    <% events.forEach(event => { %>
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-bold"><%= event.event_name %></h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <img
+              class="w-100"
+              src="/uploads/images/<%= event.event_poster %>"
+              alt="Event poster"
+            />
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <h6 class="my-1">
+              Location:
+              <span class="text-muted"><%= event.event_location %></span>
+            </h6>
+            <h6 class="my-1">
+              Date: <span class="text-muted"><%= event.event_date %></span>
+            </h6>
+            <h6 class="my-1">
+              Starts:
+              <span class="text-muted"><%= event.event_starttime %></span>
+            </h6>
+            <hr />
+            <div>
+              <h6 class="my-1">Description:</h6>
+              <%- event.event_description %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a class="btn btn-secondary" href="/admin/events/edit/<%= event.id %>"
+          >Update</a
+        >
+        <form
+          action="/admin/events/delete/<%= event.id %>?_method=DELETE"
+          method="post"
+          class="d-inline"          
+          onsubmit="return confirm('Do you really want to delete this event');"
+        >
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    </div>
+
+    <% }) %>
+  </div>
+</div>
+
+<%- include("../_partials/_adminfooter.ejs") %>

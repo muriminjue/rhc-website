@@ -1,0 +1,47 @@
+<%- include("../_partials/_adminheader.ejs") %>
+
+<!-- [ breadcrumb ] start -->
+
+<div class="page-header">
+  <div class="page-block">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div class="page-header-title">
+          <h5 class="m-b-10">Events</h5>
+        </div>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/"><i class="feather icon-home"></i></a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">Events</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">New</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [ breadcrumb ] end -->
+<div class="main-body">
+  <div class="page-wrapper">
+    <div class="card">
+      <div class="card-header">
+        <h5>Add New Event</h5>
+      </div>
+      <div class="card-body">
+        <form
+          action="/admin/events"
+          enctype="multipart/form-data"
+          method="post"
+        >
+          <%- include("../_partials/_forms/_events.ejs") %>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../_partials/_adminfooter.ejs") %>

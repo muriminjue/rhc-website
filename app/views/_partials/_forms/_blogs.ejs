@@ -1,0 +1,164 @@
+<script src="/plugins/ckeditor/ckeditor.js"></script>
+
+<div class="row">
+  <div class="form-group col-12">
+    <label>Blog title <sup style="color: red">*</sup></label>
+    <input
+      type="text"
+      class="form-control"
+      name="blog_title"
+      value="<%= blog.blog_title%>"
+      placeholder="Blog title"
+      required
+    />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <div class="form-group">
+      <label
+        >Post Image <% if (!blog.blog_image) { %>
+        <sup style="color: red">*</sup>
+        <% } %></label
+      >
+      <% if (blog.blog_image ) { %>
+      <input
+        type="file"
+        id="image-inputimage-input"
+        class="form-control-file"
+        accept="image/*"
+        name="blog_image"
+        placeholder="Blog image"
+      />
+      <% } else{ %>
+      <input
+        type="file"
+        id="image-input"
+        class="form-control-file"
+        accept="image/*"
+        name="blog_image"
+        placeholder="Blog Image"
+        required
+      />
+      <% } %>
+    </div>
+    <div class="form-group">
+      <label>Blog Category</label>
+      <select
+        name="categoryId"
+        class="form-control"
+        id="exampleFormControlSelect1"
+      >
+        <option value="null">None</option>
+        <% categories.forEach(category => { if (category.id== blog.categoryId) {
+        %>
+        <option value="<%= category.id %>" selected>
+          <%= category.category_name %>
+        </option>
+        <% } else { %>
+        <option value="<%= category.id %>">
+          <%= category.category_name %>
+        </option>
+        <% } }) %>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Blog Author<sup style="color: red">*</sup></label>
+      <select
+        name="writerId"
+        class="form-control"
+        id="exampleFormControlSelect1"
+        required
+      >
+        <option value="" hidden>select Item</option>
+        <% authors.forEach(author => { %> <% if(author.id == blog.writerId){ %>
+        <option value="<%= author.id %>" selected>
+          <%= author.writer_fullname %>
+        </option>
+        <% } else { %>
+        <option value="<%= author.id %>"><%= author.writer_fullname %></option>
+        <% }}) %>
+      </select>
+    </div>
+  </div>
+  <div class="form-group col-md-6 col-sm-12">
+    <label>Blog Description: <sup style="color: red">*</sup></label>
+    <textarea
+      id="editor"
+      class="form-control ck-content"
+      name="blog_description"
+      style="min-height: 200px !important"
+    >
+<%- blog.blog_description %></textarea
+    >
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group col-12">
+    <label>Blog Content:<sup style="color: red">*</sup></label>
+    <textarea
+      id="maineditor"
+      class="form-control ck-content"
+      name="blog_content"
+      style="min-height: 500px"
+    >
+<%- blog.blog_content %></textarea
+    >
+  </div>
+</div>
+
+<div class="d-inline">
+  <input type="submit" value="Submit" class="btn btn-primary" />
+  <a href="/admin/blogs" class="btn btn-danger">Cancel</a>
+</div>
+
+<script>
+  ClassicEditor.create(document.querySelector("#maineditor"), {
+    toolbar: [
+      "heading",
+      "|",
+      "bold",
+      "italic",
+      "link",
+      "|",
+      "blockQuote",
+      "mediaEmbed",
+      "insertTable",
+      "|",
+      "bulletedList",
+      "numberedList",
+      "outdent",
+      "indent",
+      "|",
+      "undo",
+      "redo",
+    ],
+  }).catch((error) => {
+    console.log(error);
+  });
+  ClassicEditor.create(document.querySelector("#editor"), {
+    toolbar: [
+      "heading",
+      "|",
+      "bold",
+      "italic",
+      "link",
+      "|",
+      "blockQuote",
+      "mediaEmbed",
+      "insertTable",
+      "|",
+      "bulletedList",
+      "numberedList",
+      "outdent",
+      "indent",
+      "|",
+      "undo",
+      "redo",
+    ],
+  }).catch((error) => {
+    return;
+  });
+</script>

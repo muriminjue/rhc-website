@@ -1,0 +1,161 @@
+<script src="/plugins/ckeditor/ckeditor.js"></script>
+
+<div class="row">
+  <div class="form-group col-md-6 col-sm-12">
+    <label>Sermon Title: <sup style="color: red">*</sup></label>
+    <input
+      type="text"
+      class="form-control"
+      name="sermon_title"
+      value="<%= sermon.sermon_title%>"
+      placeholder="Sermon title"
+      required
+    />
+  </div>
+  <div class="form-group col-md-6 col-sm-12">
+    <label>Preached by: <sup style="color: red">*</sup></label>
+    <input
+      type="text"
+      class="form-control"
+      name="sermon_speaker"
+      value="<%= sermon.sermon_speaker %>"
+      placeholder="Who preached this?"
+      required
+    />
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group col-md-6 col-sm-12">
+    <label>Preached At: <sup style="color: red">*</sup></label>
+    <input
+      type="text"
+      class="form-control"
+      name="sermon_location"
+      value="<%= sermon.sermon_location %>"
+      placeholder="Where was this preached?"
+      required
+    />
+  </div>
+  <div class="form-group col-md-6 col-sm-12">
+    <label>Preached On: <sup style="color: red">*</sup></label>
+    <input
+      type="date"
+      class="form-control"
+      name="sermon_date"
+      value="<%= new Date(sermon.sermon_date).getFullYear() +'-'+ ('0'+ (new Date(sermon.sermon_date).getMonth()+1)).slice(-2)+'-'+('0'+ new Date(sermon.sermon_date).getDate()).slice(-2) %>"
+      required
+    />
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <div class="form-group">
+      <label
+        >Sermon Poster: <% if (!sermon.sermon_poster) { %>
+        <sup style="color: red">*</sup>
+        <% } %></label
+      >
+      <% if (sermon.sermon_poster ) { %>
+      <input
+        type="file"
+        id="image-input"
+        class="form-control-file"
+        accept="image/*"
+        name="sermon_poster"
+        placeholder="Sermon poster"
+      />
+      <% } else{ %>
+      <input
+        type="file"
+        id="image-input"
+        class="form-control-file"
+        accept="image/*"
+        name="sermon_poster"
+        placeholder="Sermon poster"
+        required
+      />
+      <% } %>
+    </div>
+    <div class="form-group">
+      <label
+        >Sermon Audio: <% if (!sermon.sermon_audio) { %>
+        <sup style="color: red">*</sup>
+        <% } %></label
+      >
+      <% if (sermon.sermon_audio ) { %>
+      <input
+        type="file"
+        id="audio-input"
+        class="form-control-file"
+        accept="audio/*"
+        name=" sermon_audio"
+        placeholder="Sermon audio"
+        hidden
+      />
+      <% } else{ %>
+      <input
+        type="file"
+        id="audio-input"
+        class="form-control-file"
+        accept="audio/*"
+        name="sermon_audio"
+        placeholder="Sermon audio"
+        required
+      />
+      <% } %>
+    </div>
+    <div class="form-group">
+      <label>Sermon video link: </label>
+      <input
+        type="url"
+        class="form-control"
+        name="sermon_videolink"
+        value="<%= sermon.sermon_videolink %>"
+        placeholder="eg: https://youtu.be/0i9TQtU6c4Q"
+      />
+    </div>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <div class="form-group">
+      <label>Sermon Description</label>
+      <textarea
+        id="editor"
+        class="form-control ck-content"
+        name="sermon_description"
+      >
+  <%- sermon.sermon_description %></textarea
+      >
+    </div>
+    <div class="d-inline">
+      <input type="submit" value="Submit" class="btn btn-primary" />
+      <a href="/admin/sermons" class="btn btn-danger">Cancel</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  ClassicEditor.create(document.querySelector("#editor"),{
+    toolbar: [
+      "heading",
+      "|",
+      "bold",
+      "italic",
+      "link",
+      "|",
+      "blockQuote",
+      "mediaEmbed",
+      "insertTable",
+      "|",
+      "bulletedList",
+      "numberedList",
+      "outdent",
+      "indent",
+      "|",
+      "undo",
+      "redo",
+    ],
+  }).catch((error) => {
+    return;
+  });
+</script>

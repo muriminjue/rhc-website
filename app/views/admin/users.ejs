@@ -1,0 +1,204 @@
+<%- include("../_partials/_adminheader.ejs") %>
+
+<!-- [ breadcrumb ] start -->
+
+<div class="page-header">
+  <div class="page-block">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div class="page-header-title">
+          <h5 class="m-b-10">Users</h5>
+        </div>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/"><i class="feather icon-home"></i></a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">Users</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:">All</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [ breadcrumb ] end -->
+<div class="main-body">
+  <div class="page-wrapper">
+    <div class="d-md-flex">
+      <button
+        class="btn btn-primary"
+        style="width: 200px"
+        data-toggle="modal"
+        data-target="#userModal"
+      >
+        Create New user
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h5>All Users</h5>
+      </div>
+      <div class="card-block px-0 py-3">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <tbody>
+              <% users.forEach((user,index) => { %>
+
+              <tr>
+                <td><%= index + 1 %></td>
+                <td class="mx-5">
+                  <h5 class="mb-1"><%= user.user_fullname %></h5>
+                  <p class="m-0"><%= user.user_email %></p>
+                </td>
+
+                <td>
+                  <form
+                    action="/admin/user/delete/<%= user.id %>?_method=DELETE"
+                    method="post"
+                    class="d-inline"
+                    onsubmit="return confirm('Do you really want to delete this User');"
+                  >
+                    <button
+                      type="submit"
+                      class="label theme-bg2 text-white f-12"
+                    >
+                      Delete
+                    </button>
+                  </form>
+                  <form
+                    action="/admin/user/reset/<%= user.id %>?_method=PUT"
+                    method="post"
+                    class="d-inline"
+                    onsubmit="return confirm('Do you really want to reset this user password');"
+                  >
+                    <button
+                      type="submit"
+                      class="label theme-bg text-white f-12"
+                    >
+                      Reset
+                    </button>
+                  </form>
+                  <button class="label theme-bg text-white f-12" 
+                  data-toggle="modal"
+                  data-target="#userEditModal<%= user.id %>">Update</button>
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="userModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="userModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="userModalLabel">Add New User</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="/admin/users" method="post">
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Fullname: <sup style="color: red">*</sup></label>
+            <input
+              type="text"
+              class="form-control"
+              name="user_fullname"
+              placeholder="user fullname"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>email: <sup style="color: red">*</sup> </label>
+            <input
+              type="email"
+              class="form-control"
+              name="user_email"
+              placeholder="user email"
+              required
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<% users.forEach(user => { %>
+<div
+  class="modal fade"
+  id="userEditModal<%= user.id %>"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="userEditModal<%= user.id %>"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="userEditModal<%= user.id %>">
+          Update User 
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="/admin/user/update/<%= user.id %>?_method=PUT" method="POST">
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Fullname: <sup style="color: red">*</sup></label>
+            <input
+              type="text"
+              class="form-control"
+              name="user_fullname"              
+              value="<%= user.user_fullname %>"
+              placeholder="user fullname"
+              required
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<% }) %> <%- include("../_partials/_adminfooter.ejs") %>

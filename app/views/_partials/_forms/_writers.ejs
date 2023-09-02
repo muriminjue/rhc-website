@@ -1,0 +1,96 @@
+<script src="/plugins/ckeditor/ckeditor.js"></script>
+
+<div class="row">
+  <div class="form-group col-12">
+    <label>Writer fullname: <sup style="color: red">*</sup></label>
+    <input
+      type="text"
+      class="form-control"
+      name="writer_fullname"
+      value="<%= writer.writer_fullname%>"
+      placeholder="Writer fullname"
+      required
+    />
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group col-md-6 col-sm-12">
+    <label>Writer email <sup style="color: red">*</sup></label>
+    <input
+      type="email"
+      class="form-control"
+      name="writer_email"
+      value="<%= writer.writer_email%>"
+      placeholder="Writer email"
+      required
+    />
+  </div>
+  <div class="form-group col-md-6 col-sm-12">
+    <label>Writer Photo: <sup style="color: red">*</sup></label>
+    <% if (writer.writer_image ) { %>
+    <input
+      type="file"
+      id="image-inputimage-input"
+      class="form-control-file"
+      accept="image/*"
+      name="writer_poster"
+      placeholder="Writer poster"
+    />
+    <% } else{ %>
+    <input
+      type="file"
+      id="image-input"
+      class="form-control-file"
+      accept="image/*"
+      name="writer_image"
+      placeholder="Writer photo"
+      required
+    />
+    <% } %>
+  </div>
+</div>
+<div class="row">
+  <div class="form-group col-12">
+    <label>Blog title <sup style="color: red">*</sup></label>
+    <textarea
+      id="editor"
+      class="form-control ck-content"
+      name="writer_description"
+      required
+    >
+ <%= writer.writer_description%> </textarea
+    >
+  </div>
+</div>
+
+<div class="d-inline">
+  <input type="submit" value="Submit" class="btn btn-primary" />
+  <a href="/admin/writers" class="btn btn-danger">Cancel</a>
+</div>
+
+<script>
+  ClassicEditor.create(document.querySelector("#editor"),{
+    toolbar: [
+      "heading",
+      "|",
+      "bold",
+      "italic",
+      "link",
+      "|",
+      "blockQuote",
+      "mediaEmbed",
+      "insertTable",
+      "|",
+      "bulletedList",
+      "numberedList",
+      "outdent",
+      "indent",
+      "|",
+      "undo",
+      "redo",
+    ],
+  }).catch((error) => {
+    return;
+  });
+</script>

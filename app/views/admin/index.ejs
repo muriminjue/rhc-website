@@ -1,0 +1,125 @@
+<%- include("../_partials/_adminheader.ejs") %>
+
+<!-- [ breadcrumb ] start -->
+
+<div class="page-header">
+  <div class="page-block">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div class="page-header-title">
+          <h5 class="m-b-10">Welcome</h5>
+        </div>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/"><i class="feather icon-home"></i></a>
+          </li>
+          <li class="breadcrumb-item"><a href="javascript:">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [ breadcrumb ] end -->
+
+<div class="main-body">
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-block border-bottom">
+            <div class="row d-flex align-items-center">
+              <div class="col-auto">
+                <i class="feather icon-zap f-30 text-c-green"></i>
+              </div>
+              <div class="col">
+                <h3 class="f-w-300"><%= blogsCount %></h3>
+                <span class="d-block text-uppercase">Blogs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-block border-bottom">
+            <div class="row d-flex align-items-center">
+              <div class="col-auto">
+                <i class="feather icon-zap f-30 text-c-green"></i>
+              </div>
+              <div class="col">
+                <h3 class="f-w-300"><%= commentsCount %></h3>
+                <span class="d-block text-uppercase">Blog Comments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-block border-bottom">
+            <div class="row d-flex align-items-center">
+              <div class="col-auto">
+                <i class="feather icon-zap f-30 text-c-green"></i>
+              </div>
+              <div class="col">
+                <h3 class="f-w-300"><%= sermonsCount %></h3>
+                <span class="d-block text-uppercase">Sermons</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card Recent-Users">
+      <div class="card-header">
+        <h5>Recent Comments</h5>
+      </div>
+      <div class="card-block px-0 py-3">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <tbody>
+              <% comments.forEach(comment => { %>
+
+              <tr class="unread">
+                <td>
+                  <h6 class="mb-1">Post: <%= comment.Blog.blog_title %></h6>
+                </td>
+                <td>
+                  <h6 class="mb-1">By: <%= comment.comment_fullname %></h6>
+                  <p class="m-0"><%= comment.comment_content%></p>
+                </td>
+                <td>
+                  <h6 class="text-muted">
+                    <i class="fas fa-circle text-c-green f-10 m-r-15"></i><%=
+                    comment.createdAt.toLocaleDateString() %> <%=
+                    comment.createdAt.toLocaleTimeString() %>
+                  </h6>
+                </td>
+                <td>
+                  <form
+                    action="/admin/blogs/comments/delete/<%= comment.id %>?_method=DELETE"
+                    onsubmit="return confirm('Do you really want to delete this blog post');"
+                    method="post"
+                    class="d-inline"
+                  >
+                    <button
+                      type="submit"
+                      class="btn btn-danger"
+                      style="width: 200px"
+                    >
+                      Delete
+                    </button>
+                  </form>
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../_partials/_adminfooter.ejs") %>
