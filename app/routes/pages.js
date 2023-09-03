@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 // const { user_sermons, user_singlesermons } = require("../controllers/sermons");
-// const { user_events, user_singleevents } = require("../controllers/events");
+const { user_events, user_singleevents } = require("../controllers/events");
 // const {user_blogs, user_singleblogs} = require("../controllers/blogs")
 // const {user_blogcategories} = require("../controllers/blogcategories")
 // const {save_comments} = require("../controllers/blogcomments")
@@ -19,9 +19,9 @@ router.get("/", homePage);
 // router.get("/sermons/:page", user_sermons);
 // router.get("/sermons/listen/:id", user_singlesermons);
 
-// // events
-// router.get("/events", user_events);
-// router.get("/events/:id", user_singleevents);
+// events
+router.get("/events", user_events);
+router.get("/events/:id", user_singleevents);
 
 // // blogs
 // router.get("/blogs",(req,res)=>{res.redirect("/blogs/1")})

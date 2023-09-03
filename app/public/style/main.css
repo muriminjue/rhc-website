@@ -2824,11 +2824,11 @@ label {
 /*  07. Slider CSS
 /*----------------------------------------*/
 .single-slider {
-  min-height: 1020px;
+  min-height: 800px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .single-slider {
-    min-height: 900px;
+    min-height: 800px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {

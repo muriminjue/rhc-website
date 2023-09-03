@@ -1,14 +1,14 @@
 const router = require("express").Router();
 const passport = require("passport");
 
-// const {
-//   admin_events,
-//   admin_newevents,
-//   admin_saveevent,
-//   admin_editevents,
-//   admin_updateevents,
-//   admin_delevents,
-// } = require("../controllers/events");
+const {
+  admin_events,
+  admin_newevents,
+  admin_saveevent,
+  admin_editevents,
+  admin_updateevents,
+  admin_delevents,
+} = require("../controllers/events");
 
 // const {
 //   admin_sermons,
@@ -44,76 +44,76 @@ const passport = require("passport");
 //   admin_delblogs,
 // } = require("../controllers/blogs");
 
-// const {
-//   checkNotAuthenticated,
-//   checkAuthenticated,
-//   admin_users,
-//   admin_addusers,
-//   admin_deluser,
-//   admin_reset,
-//   admin_edituser,
-//   admin_changepasspage,
-//   admin_changepass,
-//   admin_resetpass,
-//   genOtp,
-//   getOtp,
-// } = require("../controllers/users");
+const {
+  checkNotAuthenticated,
+  checkAuthenticated,
+  admin_users,
+  admin_addusers,
+  admin_deluser,
+  admin_reset,
+  admin_edituser,
+  admin_changepasspage,
+  admin_changepass,
+  admin_resetpass,
+  genOtp,
+  getOtp,
+} = require("../controllers/users");
 
-// const { adminDashboard } = require("../controllers/static");
+const { adminDashboard } = require("../controllers/static");
 
 // const { admin_delcomments } = require("../controllers/blogcomments");
 
-// router.get("/", checkAuthenticated, adminDashboard);
+router.get("/", checkAuthenticated, adminDashboard);
 
-// // auth routes
-// router
-//   .route("/users")
-//   .get(checkAuthenticated, admin_users)
-//   .post(checkAuthenticated, admin_addusers);
-// router
-//   .route("/login")
-//   .get(checkNotAuthenticated, (req, res) => {
-//     res.render("admin/login");
-//   })
-//   .post(
-//     checkNotAuthenticated,
-//     passport.authenticate("local", {
-//       failureRedirect: "back",
-//       failureFlash: true,
-//     }),
-//     (req, res) => {
-//       res.redirect("back");
-//     }
-//   );
-// router.put("/user/reset/:id", checkAuthenticated, admin_reset);
-// router.put("/user/update/:id", checkAuthenticated, admin_edituser);
-// router.put("/user/updatepass", checkAuthenticated, admin_changepass);
-// router.get("/user/updatepass", checkAuthenticated, admin_changepasspage);
-// router.delete("/user/delete/:id", checkAuthenticated, admin_deluser);
-// router.delete("/logout", checkAuthenticated, (req, res) => {
-//   req.logOut((err) => {
-//     if (err) {
-//       res.redirect("back");
-//     }
-//     res.redirect("/admin/login");
-//   });
-// });
+// auth routes
+router
+  .route("/users")
+  .get(checkAuthenticated, admin_users)
+  .post(checkAuthenticated, admin_addusers);
+router
+  .route("/login")
+  .get(checkNotAuthenticated, (req, res) => {
+    res.render("admin/login");
+  })
+  .post(
+    checkNotAuthenticated,
+    passport.authenticate("local", {
+      failureRedirect: "back",
+      failureFlash: true,
+    }),
+    (req, res) => {
+      res.redirect("back");
+    }
+  );
+router.put("/user/reset/:id", checkAuthenticated, admin_reset);
+router.put("/user/update/:id", checkAuthenticated, admin_edituser);
+router.put("/user/updatepass", checkAuthenticated, admin_changepass);
+router.get("/user/updatepass", checkAuthenticated, admin_changepasspage);
+router.delete("/user/delete/:id", checkAuthenticated, admin_deluser);
+router.delete("/logout", checkAuthenticated, (req, res) => {
+  req.logOut((err) => {
+    if (err) {
+      res.redirect("back");
+    }
+    res.redirect("/admin/login");
+  });
+});
 
 // router.get("/otp", checkNotAuthenticated, getOtp);
 // router.post("/otp", checkNotAuthenticated, genOtp);
 // router.post("/reset/password", checkNotAuthenticated, admin_resetpass);
 
-// //events
-// router
-//   .route("/events")
-//   .get(checkAuthenticated, admin_events)
-//   .post(checkAuthenticated, admin_saveevent);
-// router.get("/events/new", checkAuthenticated, admin_newevents);
-// router
-//   .route("/events/edit/:id")
-//   .get(checkAuthenticated, admin_editevents)
-//   .put(checkAuthenticated, admin_updateevents);
-// router.delete("/events/delete/:id", checkAuthenticated, admin_delevents);
+//events
+router
+  .route("/events")
+  .get(checkAuthenticated, admin_events)
+  .post(checkAuthenticated, admin_saveevent);
+router.get("/events/new", checkAuthenticated, admin_newevents);
+router
+  .route("/events/edit/:id")
+  .get(checkAuthenticated, admin_editevents)
+  .put(checkAuthenticated, admin_updateevents);
+router.delete("/events/delete/:id", checkAuthenticated, admin_delevents);
 
 // //sermons
 // router
