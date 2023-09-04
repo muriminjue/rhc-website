@@ -117,6 +117,223 @@
             </div>
         </div>
 
+        <div id="gospel" class="pt-120 pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-60">
+                            <h6>Gospel</h6>
+                            <h2>Where Is Your Hope? </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-img mb-30">
+                            <img src="/images/gospel.png" alt="gospel_tract_illustration">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="faq__content mb-50">
+                            <div class="accordion" id="accordionFaq">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            Are you ready?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionFaq">
+                                        <div class="accordion-body">
+                                            <p>
+                                                It is appointed that man must die and after that the judgment (Heb
+                                                9:27). Are you ready to stand before the judgement seat of Christ?
+                                            </p>
+                                            <p>Jesus warned us that it will not profit us anything if we gain the whole
+                                                world and lose our souls. (Mark 8:36-38)
+                                            </p>
+                                            <p>Why is the day of judgment an important matter to pause and consider?</p>
+                                            <ol type="a">
+                                                <li style="list-style: unset">
+                                                    God is a holy and just God. For God to be true to who he is he
+                                                    must uphold his law and punish sin. The bible tells us that if God
+                                                    was to mark iniquity no one would stand (Psalm 130:3-4; Jeremiah
+                                                    32:19; 1 Samuel 2:25)
+                                                </li>
+                                                <li style="list-style: unset">
+                                                    We are all sinners and therefore God’s judgment hangs upon us
+                                                    (Romans 3:10-18, 23). No one is righteous before God and to make the
+                                                    matter worse even own righteous deeds are like filthy rags before
+                                                    Him (Isaiah 64:6).
+                                                </li>
+                                                <li style="list-style: unset">
+                                                    The wages of sin is death (Roams 6:23). The place of eternal
+                                                    separation from God for unrepentant sinners is hell. It is one thing
+                                                    to be rejected by family or friends but it is entirely a different
+                                                    thing to be eternally separated in hell from God who is the source
+                                                    of life, peace and happiness (Matthew 10:28; Revelation 21:8)
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            What then is the way forward?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionFaq">
+                                        <div class="accordion-body">
+                                            <ol type="a">
+                                                <li style="list-style: unset">
+                                                    God in his great mercy and grace gave up his son Jesus Christ to die
+                                                    on the cross on our behalf. He died the death we should have died.
+                                                    He suffered the punishment we should have suffered (John 3:16;
+                                                    Galatians 3:13; 2 Cor 5:21; Romans 5:8; Ephesians 2:1-8)
+                                                </li>
+                                                <li style="list-style: unset">
+                                                    God then commands us to repent and turn away from our sinful ways
+                                                    and to trust that the death and blood of Jesus Christ and his
+                                                    resurrection is sufficient to cleanse us and make us as white as
+                                                    snow. (Mark 1:15)
+                                                </li>
+                                            </ol>
+                                            <p>
+                                                The only way to be ready for the judgment is to sincerely and humbly
+                                                come to the Lord and confess to him how you have sinned against him,
+                                                used him and mocked him and that you do not have what it takes to
+                                                deliver yourself from his judgment nor do you have the holiness needed
+                                                to stand before him. You must pray and plead with God to open your eyes
+                                                to see your sinfulness and by his grace to cry him to save you from his
+                                                wrath and to make you his child.
+                                            </p>
+                                            <p>There is no greater joy and peace than knowing that you are forgiven and
+                                                accepted by God based on the life and work of Christ (Romans 5:1,8;
+                                                8:1).
+                                            </p>
+                                            <p>If you need help in understanding these glorious truths please feel free
+                                                to email or call us. In addition, if you are looking for a church that
+                                                will teach you how to know Jesus, follow him and serve him please
+                                                consider visiting us and we will be glad to welcome you.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="events-d_area light-bg pt-120 pb-80">
+            <div class="container">
+                <div class="section-title text-center mb-80">
+                    <h6>events</h6>
+                    <h2>Join Us</h2>
+                </div>
+                <% if (events[0]) { %>
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="sd-single-eve s-gray-bg mb-40">
+                                <div class="sd_eve-btn">
+                                    <a href="/events/<%= events[0].id %>" class="btn-sm-white">Upcoming</a>
+                                </div>
+                                <div class="event_up-bg w-img">
+                                    <img src="/uploads/images/<%= events[0].event_poster %>" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="sd-single-eve white-bg mb-40">
+                                <span class="sd_date mb-15">24th may 2018</span>
+                                <h4><a href="/events/<%= events[0].id %>">
+                                        <%= events[0].event_name %>
+                                    </a></h4>
+                                <div style="
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 7;
+                            line-clamp: 7;
+                            line-height: 20px;
+                            -webkit-box-orient: vertical;
+                          ">
+                                    <%- events[0].event_description %>
+                                </div>
+                                <div class="sd_eve-btn my-3">
+                                    <a href="/events/<%= events[0].id %>" class="btn-sm-2">More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="sm-events-item mb-40">
+                                    <div class="sm-eve-image w-img">
+                                        <img src="assets/img/events/sm-eve1.jpg" alt="">
+                                    </div>
+                                    <div class="top_date-eve">
+                                        <span> <b>Every</b> <br> Sunday</span>
+                                    </div>
+                                    <div class="sm-eve-info">
+                                        <h6>Worship Service</h6>
+                                        <p>Weekly Gathereing of the saints on the Lord's Day every sunday at our church
+                                            premise
+                                            in Zambezi</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="sm-events-item mb-40">
+                                    <div class="sm-eve-image w-img">
+                                        <img src="assets/img/events/sm-eve2.jpg" alt="">
+                                    </div>
+                                    <div class="top_date-eve">
+                                        <span> <b>25</b> <br> March</span>
+                                    </div>
+                                    <div class="sm-eve-info">
+                                        <h6><a href="events-details.html">Love the God, cause he loves us, man is not
+                                                immortal</a></h6>
+                                        <p>Tempor incididunt ut labore et. Consec tetur adipis icing elit, sed do eiu
+                                            smod
+                                            labore tempor sed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="sm-events-item mb-40">
+                                    <div class="sm-eve-image w-img">
+                                        <img src="assets/img/events/sm-eve3.jpg" alt="">
+                                    </div>
+                                    <div class="top_date-eve">
+                                        <span> <b>28</b> <br> March</span>
+                                    </div>
+                                    <div class="sm-eve-info">
+                                        <h6><a href="events-details.html">How to Be a Buddhist in Today’s World live
+                                                peace
+                                                sed</a></h6>
+                                        <p>Tempor incididunt ut labore et. Consec tetur adipis icing elit, sed do eiu
+                                            smod
+                                            labore tempor sed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <!-- events-d_area-end -->
+
+
         <div id="directions" class="pt-120 pb-0">
             <div class="container-fluid">
                 <div class="row">

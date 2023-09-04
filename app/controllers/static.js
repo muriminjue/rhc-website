@@ -23,7 +23,7 @@ const homePage = async (req, res) => {
     let events = await Events.findAll({
         where: { event_date: { [Op.gte]: new Date() } },
         order: [["event_date", "ASC"]],
-        limit: 3,
+        limit: 1,
       }),
       blogs = await Blogs.findAll({
         order: [["createdAt", "DESC"]],

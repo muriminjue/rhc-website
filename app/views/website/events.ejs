@@ -30,7 +30,7 @@
                         <div class="col-lg-6">
                             <div class="main-event mb-40">
                                 <div class="event-image w-img">
-                                    <a href="/event/<%= event.id %>"><img
+                                    <a href="/events/<%= event.id %>"><img
                                             src="/uploads/images/<%= event.event_poster %>" alt="poster"
                                             style="height: 500px;"></a>
                                 </div>
@@ -45,7 +45,7 @@
                                             </h5>
                                         </div>
                                         <div class="events-text-two fix">
-                                            <h5><a href="/event/<%= event.id %>">
+                                            <h5><a href="/events/<%= event.id %>">
                                                     <%= event.event_name %>
                                                 </a></h5>
                                         </div>
@@ -60,14 +60,13 @@
                                         <i class="fas fa-map-marker-alt px-2">
                                             <%= event.event_location %>
                                         </i>
-                                        <%- event.event_description %>
                                     </div>
                                     <div class="events_button">
                                         <!-- <div class="event_button1 mr-20">
                                         <a href="events-details.html" class="tp-btn-active">reservation</a>
                                     </div> -->
                                         <div class="event_button2">
-                                            <a href="/event/<%= event.id %>" class="tp-btn-border">view event</a>
+                                            <a href="/events/<%= event.id %>" class="tp-btn-border">view event</a>
                                         </div>
                                     </div>
                                 </div>

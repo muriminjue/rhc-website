@@ -1,0 +1,71 @@
+<%- include("../_partials/_mainheader.ejs") %>
+
+    <main>
+        <!-- page-ttle-area start  -->
+        <div class="page-ttle-area text-center" data-background="/images/events.jpg">
+            <div class="container">
+                <div class="page-title">
+                    <h2>
+                        <%= event.event_name %>
+                    </h2>
+                    <div class="breadcrumb-menu">
+                        <ul>
+                            <li><a href="/">home</a></li>
+                            <li><span>Event Details</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page-ttle-area start -->
+        <!-- events-details-start -->
+        <div class="events-details pt-120 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="events_details">
+                        <div class="eventd-image w-img">
+                            <img src="/uploads/images/<%= event.event_poster %>" alt="poster" style="height: 800px;">
+                        </div>
+                        <div class="event-information">
+                            <div class="row g-0">
+                                <div class="col-lg-5">
+                                    <div class="events-description">
+                                        <div class="events-sm-mete mb-20">
+                                            <ul>
+                                                <li>
+                                                    <h6>Date</h6>
+                                                    <p>
+                                                        <%= event.event_date %>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <h6>Time</h6>
+                                                    <p>
+                                                        <%= event.event_starttime %>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <h6>Location</h6>
+                                                    <p><%= event.event_location %></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="event_text">
+                                        <%- event.event_description %>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="events-icon">
+                                <img src="assets/img/events/events-icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include("../_partials/_mainfooter.ejs") %>
