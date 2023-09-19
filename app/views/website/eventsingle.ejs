@@ -1,4 +1,4 @@
-<%- include("../_partials/_mainheader.ejs") %>
+<%- include("../_partials/_singleheaders/_eventsheader.ejs") %>
 
     <main>
         <!-- page-ttle-area start  -->
@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="page-title">
                     <h2>
-                        <%= event.event_name %>
+                        <%= event?.event_name %>
                     </h2>
                     <div class="breadcrumb-menu">
                         <ul>
@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="events_details">
                         <div class="eventd-image w-img">
-                            <img src="/uploads/images/<%= event.event_poster %>" alt="poster" style="height: 800px;">
+                            <img src="/uploads/images/<%= event?.event_poster %>" alt="poster" style="height: 800px;">
                         </div>
                         <div class="event-information">
                             <div class="row g-0">
@@ -35,18 +35,26 @@
                                                 <li>
                                                     <h6>Date</h6>
                                                     <p>
-                                                        <%= event.event_date %>
+                                                        <%= new Date(event?.event_date).toLocaleString('default', {
+                                                            month: 'long' }); %>
+                                                            <%= event?.event_date.getDate() %>, <%=
+                                                                    event?.event_date.getFullYear() %>
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <h6>Time</h6>
                                                     <p>
-                                                        <%= event.event_starttime %>
+                                                        <%= new Date('1970-01-01T' + event?.event_starttime + 'Z' )
+                                                            .toLocaleTimeString('en-US',
+                                                            {timeZone:'UTC',hour12:true,hour:'numeric',minute:'numeric'}
+                                                            ); %>
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <h6>Location</h6>
-                                                    <p><%= event.event_location %></p>
+                                                    <p>
+                                                        <%= event?.event_location %>
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -54,12 +62,35 @@
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="event_text">
-                                        <%- event.event_description %>
+                                        <%- event?.event_description %>
                                     </div>
+                                </div>
+                                <div>
+                                    <ul class="list-inline d-inline">
+                                        <li class="list-inline-item mx-0" style="color: #000;">
+                                            <i class="ti-sharethis"> Share On:</i>
+                                        </li>
+                                        <li class="list-inline-item mx-0">
+                                            <a class="d-inline-block p-2 text-color" target="_blank"
+                                                href="https://www.facebook.com/sharer/sharer.php?u=<%= url %>"><i
+                                                    class="ti-facebook"> Facebook</i></a>
+                                        </li>
+                                        <li class="list-inline-item mx-0">
+                                            <a class="d-inline-block p-2 text-color"
+                                                href="https://twitter.com/intent/tweet?text=<%= event.event_name%> <%= url %>"
+                                                target="_blank"><i class="ti-twitter-alt"> Twitter</i></a>
+                                        </li>
+                                        <li class="list-inline-item mx-0">
+                                            <a class="d-inline-block p-2 text-color" target="_blank"
+                                                href="https://wa.me/?text=<%= event.event_name%>  <%= url %>"
+                                                data-action="share/whatsapp/share "><i class="ti-comment">
+                                                    Whatsapp</i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="events-icon">
-                                <img src="assets/img/events/events-icon.png" alt="">
+                                <img src="/images/icons/events-icon.png" alt="">
                             </div>
                         </div>
                     </div>

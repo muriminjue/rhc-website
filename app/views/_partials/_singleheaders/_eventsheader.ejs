@@ -5,12 +5,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Redeemer Hope Church</title>
+    <title>
+        <%= event?.event_name %>
+    </title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-    <meta name="og:image" content="<%= hostUrl %>/images/rhclogo_1.png" />
-    <meta name="description" content="A biblical church in Zambezi, Kikuyu" />
+    <meta name="og:image" content="<%= hostUrl %>/uploads/images/<%= event.event_poster %>" />
+    <meta name="description" content="<%= event?.description %>" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Redeemer Hope Church" />
+    <meta property="og:title" content="<%= event?.event_name %>" />
     <!-- <link rel="manifest" href="site.webmanifest" /> -->
     <!-- Place favicon.png in the root directory -->
 

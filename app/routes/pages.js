@@ -6,13 +6,14 @@ const { user_events, user_singleevents } = require("../controllers/events");
 // const {user_blogcategories} = require("../controllers/blogcategories")
 // const {save_comments} = require("../controllers/blogcomments")
 // const {user_writer} = require("../controllers/writers")
-const {homePage, leadersPage, aboutPage} = require("../controllers/static")
+const {homePage, leadersPage, aboutPage, sofPage, contactpage} = require("../controllers/static")
 
 
 router.get("/", homePage);
-
-// router.get("/about", aboutPage);
-// router.get("/leaders", leadersPage);
+router.get("/about", aboutPage);
+router.get("/leaders", leadersPage);
+router.get("/sof", sofPage);
+router.get("/contact", contactpage);
 
 // // sermons
 // router.get("/sermons",(req,res)=>{res.redirect("/sermons/1")})

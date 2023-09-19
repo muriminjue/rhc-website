@@ -6,11 +6,19 @@ const { Blogs, Events, Writers, Sermons, Blogcomments } = require("../models");
 const adminDashboard = async (req, res) => {
   try {
     let comments = await Blogcomments.findAll({
-      include: [{ model: Blogs }],
-      order: [["createdAt", "DESC"]],
-      limit: 10,
-    }), commentsCount = await Blogcomments.count(), blogsCount = await Blogs.count(), sermonsCount = await Sermons.count()
-    res.render("admin/index", { comments, commentsCount, blogsCount, sermonsCount });
+        include: [{ model: Blogs }],
+        order: [["createdAt", "DESC"]],
+        limit: 10,
+      }),
+      commentsCount = await Blogcomments.count(),
+      blogsCount = await Blogs.count(),
+      sermonsCount = await Sermons.count();
+    res.render("admin/index", {
+      comments,
+      commentsCount,
+      blogsCount,
+      sermonsCount,
+    });
     logger.info("Admin rendered dashboard");
   } catch (error) {
     logger.error("Admin could not load dashboard due to: " + error);
@@ -60,4 +68,32 @@ const aboutPage = (req, res) => {
   }
 };
 
-module.exports = { homePage, adminDashboard , leadersPage, aboutPage};
+const sofPage = (req, res) => {
+  try {
+    res.render("website/sof");
+    logger.info("User statement of faith page requested");
+  } catch (error) {
+    logger.error(
+      "User statement of faith page could not render due to: " + error
+    );
+    res.render("website/error");
+  }
+};
+const contactpage = (req, res) => {
+  try {
+    res.render("website/contact");
+    logger.info("User contact page requested");
+  } catch (error) {
+    logger.error("User contact page could not render due to: " + error);
+    res.render("website/error");
+  }
+};
+
+module.exports = {
+  homePage,
+  adminDashboard,
+  leadersPage,
+  aboutPage,
+  sofPage,
+  contactpage,
+};

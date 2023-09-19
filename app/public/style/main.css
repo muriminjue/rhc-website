@@ -92,7 +92,7 @@ a:focus {
 }
 
 a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 a,
@@ -260,7 +260,7 @@ label {
 }
 
 .theme-bg {
-  background: #ec6e39;
+  background: #fcbe11;
 }
 
 .light-bg {
@@ -291,7 +291,7 @@ label {
 }
 
 .theme-color {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 /*--
@@ -1586,7 +1586,7 @@ label {
 }
 
 .tp-btn-active {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
   font-weight: 700;
   display: inline-block;
@@ -1618,13 +1618,13 @@ label {
   transition: 0.3s;
 }
 .tp-btn-border:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .s-btn {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
   font-weight: 700;
   display: inline-block;
@@ -1644,7 +1644,7 @@ label {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .s-btn-d:hover {
     background: #ffffff;
-    color: #ec6e39;
+    color: #fcbe11;
   }
 }
 
@@ -1662,9 +1662,9 @@ label {
   letter-spacing: 2px;
 }
 .btn-border:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #fff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .btn-border-2 {
@@ -1681,9 +1681,9 @@ label {
   letter-spacing: 2px;
 }
 .btn-border-2:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #fff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .btn-border-d {
@@ -1700,13 +1700,13 @@ label {
   letter-spacing: 2px;
 }
 .btn-border-d:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #fff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .btn-lg {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
   font-weight: 700;
   display: inline-block;
@@ -1725,11 +1725,11 @@ label {
 }
 .btn-lg:hover {
   background: #ffffff;
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .btn-sm {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
   font-weight: 700;
   display: inline-block;
@@ -1757,7 +1757,7 @@ label {
 }
 
 .btn-sm-2 {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
   font-weight: 700;
   display: inline-block;
@@ -1814,8 +1814,8 @@ label {
 .sb-btn {
   width: 200px;
   height: 60px;
-  background: #ec6e39;
-  border: 1px solid #ec6e39;
+  background: #fcbe11;
+  border: 1px solid #fcbe11;
   text-align: center;
   line-height: 60px;
   color: #ffffff;
@@ -1831,15 +1831,15 @@ label {
 }
 .sb-btn:hover {
   background: #ffffff;
-  color: #ec6e39;
-  border-color: #ec6e39;
+  color: #fcbe11;
+  border-color: #fcbe11;
 }
 
 .sp-btn {
   padding: 0 70px;
   height: 60px;
-  background: #ec6e39;
-  border: 1px solid #ec6e39;
+  background: #fcbe11;
+  border: 1px solid #fcbe11;
   text-align: center;
   line-height: 60px;
   color: #ffffff;
@@ -1862,8 +1862,8 @@ label {
 }
 .sp-btn:hover {
   background: #ffffff;
-  color: #ec6e39;
-  border-color: #ec6e39;
+  color: #fcbe11;
+  border-color: #fcbe11;
 }
 
 .live-btn {
@@ -1906,9 +1906,9 @@ label {
   }
 }
 .donar-btn:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 /*----------------------------------------*/
@@ -1946,7 +1946,7 @@ label {
 }
 
 [data-overlay=theme]::before {
-  background-color: #ec6e39;
+  background-color: #fcbe11;
 }
 
 /*-- Overlay Opacity --*/
@@ -1993,7 +1993,7 @@ label {
   position: relative;
 }
 .section-title h6 {
-  color: #ec6e39;
+  color: #fcbe11;
   letter-spacing: 2px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -2133,7 +2133,7 @@ label {
   line-height: 1;
 }
 .main-menu ul li .active {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .main-menu ul li .sub-menu {
   position: absolute;
@@ -2142,7 +2142,7 @@ label {
   width: 240px;
   background: #ffffff;
   padding: 15px 25px;
-  border-top: 4px solid #ec6e39;
+  border-top: 4px solid #fcbe11;
   transition: 0.3s;
   opacity: 0;
   visibility: hidden;
@@ -2156,10 +2156,10 @@ label {
   padding: 12px 0;
 }
 .main-menu ul li .sub-menu li .active {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .main-menu ul li:hover > a {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .main-menu ul li:hover > .sub-menu {
   opacity: 1;
@@ -2237,7 +2237,7 @@ label {
 }
 .sticky.menu-area-two .header-btn .s-btn:hover {
   background: #ffffff;
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .header-transparent-2 .menu-bg {
@@ -2252,19 +2252,19 @@ label {
   color: #ffffff;
 }
 .header-transparent-2 .main-menu ul li .active {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .header-transparent-2 .main-menu ul li .sub-menu li a {
   color: #222;
 }
 .header-transparent-2 .main-menu ul li .sub-menu li .active {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .header-transparent-2 .main-menu ul li .sub-menu li:hover > a {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .header-transparent-2 .main-menu ul li:hover > a {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .header-transparent-2 .sticky .menu-bg {
   border: none;
@@ -2283,19 +2283,19 @@ label {
   padding: 34px 0;
 }
 .header-transparent-3 .main-menu ul li .active {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .header-transparent-3 .main-menu ul li .sub-menu li a {
   color: #222;
 }
 .header-transparent-3 .main-menu ul li .sub-menu li .active {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .header-transparent-3 .main-menu ul li .sub-menu li:hover > a {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .header-transparent-3 .main-menu ul li:hover > a {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .header-transparent-3 .sticky .menu-bg {
   border: none;
@@ -2336,7 +2336,7 @@ label {
   letter-spacing: 2px;
 }
 .header-cta span i {
-  color: #ec6e39;
+  color: #fcbe11;
   margin-right: 5px;
   font-size: 15px;
 }
@@ -2403,8 +2403,8 @@ label {
   transition: 0.3s;
 }
 .sidebar__close-btn:hover {
-  background: #ec6e39;
-  border-color: #ec6e39;
+  background: #fcbe11;
+  border-color: #fcbe11;
   color: #ffffff;
 }
 .sidebar__close-btn-3 {
@@ -2436,7 +2436,7 @@ label {
   color: #686893;
 }
 .sidebar__search input:focus {
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 .sidebar__search button {
   position: absolute;
@@ -2465,12 +2465,12 @@ label {
   margin-bottom: 20px;
 }
 .sidebar__contact ul li:hover i {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 .sidebar__contact ul li:hover a {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .sidebar__contact-icon i {
   display: inline-block;
@@ -2496,7 +2496,7 @@ label {
   border-color: #666;
 }
 .sidebar__contact-3 ul li:hover a {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .sidebar__map iframe {
   width: 100%;
@@ -2515,7 +2515,7 @@ label {
   height: 40px;
   line-height: 42px;
   text-align: center;
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
 }
 .sidebar__social ul li a:hover {
@@ -2594,7 +2594,7 @@ label {
   font-weight: 700;
 }
 .mean-container .mean-nav ul li a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .mean-container .mean-nav ul li a.mean-expand {
@@ -2610,9 +2610,9 @@ label {
   font-weight: 400;
 }
 .mean-container .mean-nav ul li a.mean-expand:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .mean-container .mean-nav ul li > a > i {
@@ -2642,7 +2642,7 @@ label {
 }
 
 .side-menu-icon i {
-  color: #ec6e39;
+  color: #fcbe11;
   font-size: 32px;
   cursor: pointer;
   position: relative;
@@ -2679,7 +2679,7 @@ label {
 
 .search-wrap .search-inner .search-close:hover {
   transform: rotate(90deg);
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .search-wrap .search-inner .search-cell {
@@ -2833,12 +2833,12 @@ label {
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .single-slider {
-    min-height: 800px;
+    min-height: 700px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .single-slider {
-    min-height: 650px;
+    min-height: 700px;
   }
 }
 
@@ -2853,7 +2853,7 @@ label {
   }
 }
 .flider span {
-  color: #ec6e39;
+  color: #fcbe11;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -3017,7 +3017,7 @@ label {
 }
 .single-slider::before {
   position: absolute;
-  background: #ec6e39;
+  background: #fcbe11;
   width: 100%;
   height: 100%;
   top: 0;
@@ -3033,7 +3033,7 @@ label {
 }
 .home-arrow a {
   font-size: 30px;
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .home-arrow a i {
   animation: updown 1s infinite alternate;
@@ -3166,14 +3166,14 @@ label {
   height: 80px;
   line-height: 80px;
   color: #ffffff;
-  background: #ec6e39;
+  background: #fcbe11;
   display: inline-block;
   border-radius: 50%;
   transition: 0.3s;
 }
 .top-video_icon a:hover {
   background: #ffffff;
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
@@ -3222,7 +3222,7 @@ label {
   transition: 0.3s;
 }
 .home-arrow-3 a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .slider_content-3 {
@@ -3315,7 +3315,7 @@ label {
   margin-right: 30px;
 }
 .fabout__link a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .fact {
@@ -3357,7 +3357,7 @@ label {
   color: #ffffff;
 }
 .counter_info p {
-  color: #ec6e39;
+  color: #fcbe11;
   font-size: 30px;
   font-weight: 600;
   position: relative;
@@ -3398,7 +3398,7 @@ label {
 }
 
 .events-date {
-  background: #ec6e39;
+  background: #fcbe11;
   width: 160px;
   height: 160px;
   line-height: 225px;
@@ -3532,7 +3532,7 @@ label {
   font-size: 14px;
   text-transform: uppercase;
   display: block;
-  color: #ec6e39;
+  color: #fcbe11;
   letter-spacing: 2px;
   margin-bottom: 8px;
   font-weight: 700;
@@ -3561,7 +3561,7 @@ label {
   margin-right: 10px;
 }
 .events-meta a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .events_button {
@@ -3628,7 +3628,7 @@ label {
   border-radius: 50%;
 }
 .events-calendar .calendar tbody .current-day:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
   border-radius: 50%;
 }
@@ -3638,7 +3638,7 @@ label {
   border-radius: 50%;
 }
 .events-calendar .current-day {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
   border-radius: 50%;
 }
@@ -3664,7 +3664,7 @@ label {
   transition: 0.3s;
 }
 .calendar-slider .owl-nav div:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
 }
 .calendar-slider .owl-nav .owl-next {
@@ -3721,7 +3721,7 @@ label {
 .events-description span {
   font-size: 14px;
   text-transform: uppercase;
-  color: #ec6e39;
+  color: #fcbe11;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   display: block;
@@ -3852,7 +3852,7 @@ label {
 .causes-meta .m-item span {
   font-size: 12px;
   font-weight: 600;
-  color: #ec6e39;
+  color: #fcbe11;
   display: block;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -3891,7 +3891,7 @@ label {
 }
 .sd-single-eve .sd_date {
   text-transform: uppercase;
-  color: #ec6e39;
+  color: #fcbe11;
   font-weight: 700;
   letter-spacing: 2px;
   font-size: 14px;
@@ -3927,7 +3927,7 @@ label {
   width: 80px;
   display: inline-block;
   border-radius: 50%;
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
   text-align: center;
 }
@@ -4017,7 +4017,7 @@ label {
 }
 .causes-top-meta .m-item .causes-name {
   font-weight: bold;
-  color: #ec6e39;
+  color: #fcbe11;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
@@ -4080,7 +4080,7 @@ label {
   color: #686893;
 }
 .causes-table .ammount {
-  color: #ec6e39;
+  color: #fcbe11;
   font-weight: bold;
 }
 .causes-table tr:last-child {
@@ -4126,7 +4126,7 @@ label {
   }
 }
 .causes-slider .owl-nav div:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
 }
 .causes-slider .owl-nav .owl-next {
@@ -4181,7 +4181,7 @@ label {
   transition: 0.3s;
 }
 .fservices__img-icon a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .fservices__content {
   padding-left: 40px;
@@ -4228,7 +4228,7 @@ label {
   margin-bottom: 15px;
 }
 .sv-meta span {
-  color: #ec6e39;
+  color: #fcbe11;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
@@ -4294,7 +4294,7 @@ label {
   margin-right: 4px;
 }
 .sv-tags a:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
 }
 
@@ -4310,7 +4310,7 @@ label {
   font-weight: 800;
   font-family: .single-plan span poppins;
   display: block;
-  color: #ec6e39;
+  color: #fcbe11;
   margin-bottom: 25px;
   letter-spacing: 1px;
 }
@@ -4352,8 +4352,8 @@ label {
 }
 
 .nav-button.active {
-  background: #ec6e39;
-  border-color: #ec6e39;
+  background: #fcbe11;
+  border-color: #fcbe11;
   color: #ffffff;
 }
 
@@ -4481,7 +4481,7 @@ label {
 }
 .causes-dmeta .m-item .causes-name {
   font-weight: bold;
-  color: #ec6e39;
+  color: #fcbe11;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
@@ -4506,7 +4506,7 @@ label {
   top: 0;
   left: 0;
   height: 3px;
-  background-color: #ec6e39;
+  background-color: #fcbe11;
   -webkit-transition: all 2s ease-out 0s;
   -moz-transition: all 2s ease-out 0s;
   -ms-transition: all 2s ease-out 0s;
@@ -4525,7 +4525,7 @@ label {
 .donate_progress .bar_inner .progress_line .percentage::before {
   content: "\f192";
   position: absolute;
-  color: #ec6e39;
+  color: #fcbe11;
   background: #ffffff;
   border-radius: 50%;
   font-size: 15px;
@@ -4546,7 +4546,7 @@ label {
   margin-bottom: 20px;
 }
 .join-form label span {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 .join-form input {
   background: none;
@@ -4569,7 +4569,7 @@ label {
   font-weight: 600;
 }
 .join-form input:focus {
-  border: 2px solid #ec6e39;
+  border: 2px solid #fcbe11;
 }
 .join-form select {
   height: 78px;
@@ -4584,7 +4584,7 @@ label {
   font-weight: 600;
 }
 .join-form select:focus {
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .join-us-area {
@@ -4726,7 +4726,7 @@ label {
   opacity: 1;
 }
 .contact-filed input:focus {
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 .contact-filed textarea {
   width: 100%;
@@ -4749,7 +4749,7 @@ label {
   opacity: 1;
 }
 .contact-filed textarea:focus {
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .contact-filed-two::after {
@@ -4813,7 +4813,7 @@ label {
   transition: 0.3s;
 }
 .features__content a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .news-item {
@@ -4873,7 +4873,7 @@ label {
 .news_icon a {
   height: 50px;
   width: 50px;
-  background: #ec6e39;
+  background: #fcbe11;
   line-height: 50px;
   border-radius: 50%;
   font-size: 15px;
@@ -4883,7 +4883,7 @@ label {
 }
 .news_icon a:hover {
   background: #ffffff;
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .news-content {
@@ -4952,7 +4952,7 @@ label {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .test-thumb img {
@@ -5015,7 +5015,7 @@ label {
 }
 .testimonial_sm-author span {
   text-transform: uppercase;
-  color: #ec6e39;
+  color: #fcbe11;
   letter-spacing: 2px;
   font-weight: 700;
   font-size: 12px;
@@ -5078,7 +5078,7 @@ label {
   content: "\f067";
   right: 30px;
   font-size: 18px;
-  color: #ec6e39;
+  color: #fcbe11;
   font-family: "Font Awesome 5 Pro";
   position: absolute;
   margin: 0;
@@ -5119,11 +5119,11 @@ label {
   font-size: 14px;
 }
 .lblog__content-link a {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .sub-title {
-  color: #ec6e39;
+  color: #fcbe11;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
@@ -5169,7 +5169,7 @@ label {
   height: 100%;
   width: 60px;
   border: 0;
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
 }
 .widget__category li {
@@ -5192,7 +5192,7 @@ label {
   padding-bottom: 0;
 }
 .widget__category li:hover > a {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .widget-posts-image {
@@ -5240,9 +5240,9 @@ label {
   transition: 0.3s;
 }
 .widget_social a:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .tag a {
@@ -5261,9 +5261,9 @@ label {
   transition: 0.3s;
 }
 .tag a:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .widget-gallery {
@@ -5329,7 +5329,7 @@ label {
   margin-right: 10px;
 }
 .blog-meta li a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .news-title {
@@ -5434,7 +5434,7 @@ label {
   margin-right: 10px;
 }
 .blog-meta li a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .news-title {
@@ -5504,7 +5504,7 @@ label {
 .news-quote-area i {
   height: 60px;
   width: 60px;
-  background: #ec6e39;
+  background: #fcbe11;
   border-radius: 50%;
   font-size: 25px;
   line-height: 56px;
@@ -5548,9 +5548,9 @@ label {
   }
 }
 .news-tag a:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .news-share {
@@ -5749,8 +5749,8 @@ label {
   transform: rotateY(-190deg);
 }
 .comment-reply:hover {
-  background: #ec6e39;
-  border-color: #ec6e39;
+  background: #fcbe11;
+  border-color: #fcbe11;
   color: #ffffff;
 }
 
@@ -5795,7 +5795,7 @@ label {
   transition: 0.3s;
 }
 .post-comment-form form textarea:focus {
-  border: 1px solid #ec6e39;
+  border: 1px solid #fcbe11;
 }
 
 .post-comment-form form textarea::placeholder {
@@ -5809,7 +5809,7 @@ label {
 
 .post-comment-form form .input-field i {
   font-size: 14px;
-  color: #ec6e39;
+  color: #fcbe11;
   position: absolute;
   top: 5px;
   right: 5px;
@@ -5833,7 +5833,7 @@ label {
   transition: 0.3s;
 }
 .post-comment-form form input:focus {
-  border: 1px solid #ec6e39;
+  border: 1px solid #fcbe11;
 }
 
 .post-comment-form form input::placeholder {
@@ -5863,7 +5863,7 @@ label {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #ec6e39;
+  color: #fcbe11;
   letter-spacing: 2px;
   display: block;
 }
@@ -5878,7 +5878,7 @@ label {
   transition: 0.3s;
 }
 .team-content .team-social ul li a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .team_details_image {
@@ -5912,7 +5912,7 @@ label {
 .team_d-degination {
   font-size: 30px;
   line-height: 1;
-  color: #ec6e39;
+  color: #fcbe11;
   display: block;
 }
 @media (max-width: 575px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
@@ -5923,7 +5923,7 @@ label {
 
 .team_contact-icon i {
   font-size: 20px;
-  color: #ec6e39;
+  color: #fcbe11;
   position: relative;
   top: 5px;
 }
@@ -5948,7 +5948,7 @@ label {
 }
 .team-social_icon a:hover {
   color: #ffffff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 .team-social_icon a:hover i {
   transform: rotate(360deg);
@@ -5963,7 +5963,7 @@ label {
   left: 0px;
   height: 100%;
   width: 0%;
-  background: #ec6e39;
+  background: #fcbe11;
   z-index: -1;
   transform: rotate(90deg);
   -webkit-transition: all 0.3s ease-out 0s;
@@ -6008,7 +6008,7 @@ label {
   transition: 0.3s;
 }
 .footer-widget ul li a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .single-footer-post {
@@ -6020,7 +6020,7 @@ label {
   line-height: 1.4;
 }
 .single-footer-post span {
-  color: #ec6e39;
+  color: #fcbe11;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
@@ -6032,7 +6032,7 @@ label {
   color: #afb3d6;
 }
 .copyright p a {
-  color: #ec6e39;
+  color: #fcbe11;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -6046,7 +6046,7 @@ label {
   transition: 0.3s;
 }
 .copy-right_useful_link a:hover {
-  color: #ec6e39;
+  color: #fcbe11;
 }
 
 .footer-social a {
@@ -6066,9 +6066,9 @@ label {
   margin-left: 0;
 }
 .footer-social a:hover {
-  background: #ec6e39;
+  background: #fcbe11;
   color: #ffffff;
-  border-color: #ec6e39;
+  border-color: #fcbe11;
 }
 
 .footer-col-2 {
@@ -6144,7 +6144,7 @@ label {
   letter-spacing: 2px;
 }
 .breadcrumb-menu ul li span {
-  color: #ec6e39;
+  color: #fcbe11;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 18px;
@@ -6167,8 +6167,8 @@ label {
   background: #ffffff;
 }
 .fundo-pagination a:hover {
-  background: #ec6e39;
-  border-color: #ec6e39;
+  background: #fcbe11;
+  border-color: #fcbe11;
   color: #ffffff;
 }
 
